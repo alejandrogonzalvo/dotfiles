@@ -1,0 +1,13 @@
+[kmix]
+_k_friendly_name=KMix
+decrease_volume=Volume Down,Volume Down,Decrease Volume
+increase_volume=Volume Up,Volume Up,Increase Volume
+mute=Volume Mute,Volume Mute,Mute
+
+[org.kde.spectacle.desktop]
+ActiveWindowScreenShot=Meta+Print,Meta+Print,Capture Active Window
+CurrentMonitorScreenShot=,none,Capture Current Monitor
+FullScreenScreenShot=Shift+Print,Shift+Print,Capture Entire Desktop
+RectangularRegionScreenShot=Meta+Shift+Print,Meta+Shift+Print,Capture Rectangular Region
+_k_friendly_name=Spectacle
+_launch=Print,Print,Launch Spectacle

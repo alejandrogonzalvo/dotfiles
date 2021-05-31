@@ -1,0 +1,3 @@
+citra: {}
+system:
+  pulse_latency: true
