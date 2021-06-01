@@ -109,13 +109,13 @@ globalkeys = gears.table.join(
               {description = "lower volume", group= "launcher"}),
     awful.key({ modkey,           }, "p", function () awful.spawn("amixer set 'Master' 10%+")   end,
               {description = "lower volume", group= "launcher"}),
-    awful.key({ modkey,           }, "m", 
-      function () 
+    awful.key({ modkey,           }, "m",
+      function ()
         if v_muted then
-          awful.spawn("pactl set-sink-mute 0 0")   
+          awful.spawn("pactl set-sink-mute 0 0")
           v_muted = false
         else
-          awful.spawn("pactl set-sink-mute 0 1")   
+          awful.spawn("pactl set-sink-mute 0 1")
           v_muted = true
         end
       end,
@@ -158,17 +158,17 @@ globalkeys = gears.table.join(
               {description = "swap with next client by index", group = "client"}),
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
-    awful.key({ modkey,  }, "j", 
-    	function () 
-	    local c = awful.client.next(1)
-	    client.focus = c
-    	end,
-        {description = "focus the before client", group = "screen"}),
-    awful.key({ modkey,  }, "k", 
-    	function () 
+    awful.key({ modkey,  }, "j",
+ 	  function ()
+      local c = awful.client.next(1)
+      client.focus = c
+  	end,
+      {description = "focus the before client", group = "screen"}),
+    awful.key({ modkey,  }, "k",
+   	function ()
 	    local c = awful.client.next(-1)
 	    client.focus = c
-    	end,
+   	end,
         {description = "focus the next client", group = "screen"}),
     awful.key({ modkey,           }, "Tab",
         function ()
@@ -178,7 +178,7 @@ globalkeys = gears.table.join(
             end
         end,
         {description = "go back", group = "client"}),
-	
+
     awful.key({ modkey,		  }, "-",
     	function()
 	        awful.spawn("spectacle")
@@ -193,14 +193,14 @@ globalkeys = gears.table.join(
 	    else
 	    	awful.spawn("polybar-msg cmd hide")
 		p_hidden = true
-	    end	
+	    end
     	end,
 	{description = "hide polybar", group = "client"}),
-    
-	awful.key({ modkey,		  }, "a", 
+
+	awful.key({ modkey,		  }, "a",
 	function ()
-	    awful.layout.inc(1)
-        end,
+	  awful.layout.inc(1)
+      end,
 	{description = "switch layout", group = "layout"}),
 
 
@@ -211,9 +211,9 @@ globalkeys = gears.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-	    awful.key({ modkey,		}, "d", function () awful.spawn("/home/alejandro/.config/rofi/launchers/text/./launcher.sh") end,
+	  awful.key({ modkey,		}, "d", function () awful.spawn("/home/alejandro/.config/rofi/launchers/text/./launcher.sh") end,
               {description = "show the menubar", group = "launcher"})
-	      ),
+	   ),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),

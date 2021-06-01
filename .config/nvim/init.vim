@@ -23,15 +23,13 @@ set autoindent                          " Good auto indent
 set laststatus=0                        " Always display the status line
 set number                              " Line numbers
 set background=dark                     " tell vim what the background color looks like
-set showtabline=2                       " Always show tabs
+set showtabline=0                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
-set clipboard=unnamedplus               " Copy paste between vim and everything else
-"set autochdir                           " Your working directory will always be the same as your working directory
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
@@ -43,4 +41,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-ctrlspace/vim-ctrlspace'
 call plug#end()
+
+"ctrlspace configuration
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+
+"Status line configuration with vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_y = ''
+let g:airline_section_z = '  %l/%L'
