@@ -130,7 +130,7 @@ globalkeys = gears.table.join(
         end
         local pt = t.screen.tags[t.index-1]
         if pt == nil then
-          return
+          pt = t.screen.tags[4]
         end
         awful.client.movetotag(pt)
         awful.tag.viewprev()
@@ -146,7 +146,7 @@ globalkeys = gears.table.join(
         end
         local nt = client.focus.screen.tags[t.index+1]
         if nt == nil then
-          return
+          nt = t.screen.tags[1]
         end
         awful.client.movetotag(nt)
         awful.tag.viewnext()

@@ -1,13 +1,9 @@
-" set leader key
-let g:mapleader = "<Space>"
-
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set fileencoding=utf-8                  " The encoding written to file
 set ruler              			            " Show the cursor position all the time
-set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
@@ -24,7 +20,6 @@ set laststatus=0                        " Always display the status line
 set number                              " Line numbers
 set background=dark                     " tell vim what the background color looks like
 set showtabline=0                       " Always show tabs
-set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
@@ -36,6 +31,9 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 " You can't stop me
 cmap w!! w !sudo tee %
 
+" Plugins
+"==================================================================
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
@@ -43,13 +41,30 @@ Plug 'tpope/vim-fugitive'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-ctrlspace/vim-ctrlspace'
 call plug#end()
 
-"ctrlspace configuration
-let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
 "Status line configuration with vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_y = ''
 let g:airline_section_z = '  %l/%L'
+
+" ======================================== 
+" Custom styling
+" ======================================== 
+
+set fillchars+=vert:\
+
+autocmd BufEnter * setlocal cursorline
+autocmd WinEnter * setlocal cursorline
+autocmd BufLeave * setlocal nocursorline
+autocmd WinLeave * setlocal nocursorline
+
+" ======================================== 
+" Keyboard mapping
+" ======================================== 
+" set leader key
+let g:mapleader = ","
+
+" open NERDTree
+nnoremap <silent> <leader>tr :NERDTreeToggle<CR>
