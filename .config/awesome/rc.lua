@@ -8,9 +8,15 @@ local awful = require("awful")
 require("awful.autofocus")
 -- Theme handling library
 local beautiful = require("beautiful")
--- Notification library
+-- Notification library and config
 local naughty = require("naughty")
-local menubar = require("menubar")
+naughty.config.padding = 8
+naughty.config.spacing = 8
+naughty.config.defaults.margin = 8
+naughty.config.defaults.timeout = 2
+naughty.config.defaults.icon_size = 16
+beautiful.notification_font = "Iosevka Nerd Font:Medium:size=22;5"
+
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- bool variables for high-level management
 local v_muted= false
