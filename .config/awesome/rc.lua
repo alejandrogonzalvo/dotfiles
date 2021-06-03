@@ -395,7 +395,7 @@ client.connect_signal("manage", function (c)
     -- if not awesome.startup then awful.client.setslave(c) end
     client.connect_signal("manage", function (c)
       c.shape = function(cr,w,h)
-        gears.shape.rounded_rect(cr,w,h,12)
+        gears.shape.rounded_rect(cr,w,h,6)
       end
     end)
 

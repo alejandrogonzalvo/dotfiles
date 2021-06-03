@@ -2,5 +2,7 @@
 window-position=50,50
 
 [Save]
+compressionQuality=100
 lastSaveAsLocation=file:///home/alejandro/Documents/forest/5.png
 lastSaveLocation=file:///home/alejandro/Documents/forest/5.png
+saveFilenameFormat=%M-%D_%H:%m:%S
