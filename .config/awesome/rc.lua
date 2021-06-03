@@ -17,7 +17,6 @@ naughty.config.spacing = 8
 naughty.config.defaults.margin = 8
 naughty.config.defaults.timeout = 2
 naughty.config.defaults.icon_size = 16
-beautiful.notification_font = "Iosevka Nerd Font:Medium:size=22;5"
 
 -- Enable hotkeys help widget for VIM and other apps
 local hotkeys_popup = require("awful.hotkeys_popup")
@@ -72,8 +71,9 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
+    awful.layout.suit.tile,
     awful.layout.suit.floating,
-    awful.layout.suit.tile
+    awful.layout.suit.corner.nw
 }
 
 -- }}}
@@ -96,8 +96,7 @@ screen.connect_signal("property::geometry", set_wallpaper)
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
     set_wallpaper(s)
-    end)
-
+    end) 
 
 awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
@@ -118,7 +117,19 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
+    {description = "view next", group = "tag"}),
+    awful.key({ modkey, "Control" }, "]", function () 
+      local t = awful.screen.focused().selected_tag
+      t.gap = t.gap + 5
+      awful.layout.arrange(awful.screen.focused())
+    end,
+    {description = "increment useless gaps", group = "tag"}),
+    awful.key({ modkey, "Control" }, "[", function ()
+      local t = awful.screen.focused().selected_tag
+      t.gap = t.gap - 5
+      awful.layout.arrange(awful.screen.focused())
+    end,
+    {description = "decrement useless gaps", group = "tag"}),     
     awful.key({ modkey,           }, "o", function () awful.spawn("amixer set 'Master' 10%-")   end,
               {description = "lower volume", group= "launcher"}),
     awful.key({ modkey,           }, "p", function () awful.spawn("amixer set 'Master' 10%+")   end,
@@ -133,7 +144,7 @@ globalkeys = gears.table.join(
           v_muted = true
         end
       end,
-    {description = "lower volume", group= "launcher"}),
+    {description = "mute volume", group= "launcher"}),
 
     awful.key({ modkey, "Shift" }, "Left",
       function ()
@@ -238,8 +249,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 	  awful.key({ modkey,		}, "d", function () awful.spawn("/home/alejandro/.config/rofi/launchers/text/./launcher.sh") end,
-              {description = "show the menubar", group = "launcher"})
-	   ),
+              {description = "show the menubar", group = "launcher"}),
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -255,7 +265,6 @@ globalkeys = gears.table.join(
               {description = "decrease the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "o",     function () awful.layout.inc(1, awful.screen.focused()) end,
         {description = "select next", group = "layout"}),
-
     awful.key({ modkey, "Control" }, "n",
               function ()
                   local c = awful.client.restore()
@@ -268,9 +277,11 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"})
 
-
+	   )
 clientkeys = gears.table.join(
-    awful.key({ modkey,           }, "f",
+
+
+   awful.key({ modkey,           }, "f",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()
@@ -290,27 +301,8 @@ clientkeys = gears.table.join(
             -- minimized, since minimized clients can't have the focus.
             c.minimized = true
         end ,
-        {description = "minimize", group = "client"}),
-    awful.key({ modkey,           }, "m",
-        function (c)
-            c.maximized = not c.maximized
-            c:raise()
-        end ,
-        {description = "(un)maximize", group = "client"}),
-    awful.key({ modkey, "Control" }, "m",
-        function (c)
-            c.maximized_vertical = not c.maximized_vertical
-            c:raise()
-        end ,
-        {description = "(un)maximize vertically", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "m",
-        function (c)
-            c.maximized_horizontal = not c.maximized_horizontal
-            c:raise()
-        end ,
-        {description = "(un)maximize horizontally", group = "client"})
-)
-
+        {description = "minimize", group = "client"})
+        )
 clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c)
         c:emit_signal("request::activate", "mouse_click", {raise = true})
@@ -393,12 +385,6 @@ client.connect_signal("manage", function (c)
     -- Set the windows at the slave,
     -- i.e. put it at the end of others instead of setting it master.
     -- if not awesome.startup then awful.client.setslave(c) end
-    client.connect_signal("manage", function (c)
-      c.shape = function(cr,w,h)
-        gears.shape.rounded_rect(cr,w,h,6)
-      end
-    end)
-
     if awesome.startup
       and not c.size_hints.user_position
       and not c.size_hints.program_position then
