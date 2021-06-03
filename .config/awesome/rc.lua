@@ -381,7 +381,7 @@ awful.rules.rules = {
     },
   
     -- Solves Firefox buggy behaviour
-    { rule = { class = "Firefox" },
+    { rule = { class = "firefox" },
       properties = { opacity = 1, maximized = false, floating = false } },
 
 }
@@ -431,8 +431,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("/home/alejandro/.config/polybar/launch.sh --shapes")
-awful.spawn(terminal.." -e dijo", {
-  floating  = true,
-  tag = mouse.screen.selected_tag,
-  x = 900,
-})
+awful.spawn(terminal.." -e dijo")
