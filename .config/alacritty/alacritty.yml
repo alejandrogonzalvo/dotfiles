@@ -142,7 +142,7 @@ font:
 colors:
   # Default colors
   primary:
-    background: '#152417'
+    background: '#101b10'
     foreground: '#f6f6f6'
 
   # Cursor colors
@@ -154,7 +154,7 @@ colors:
   normal:
     black:   '#002211'
     red:     '#883333'
-    green:   '#226622'
+    green:   '#227722'
     yellow:  '#cccc55'
     blue:    '#4466cc'
     magenta: '#6a4262'
@@ -227,7 +227,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1
+background_opacity: 0.95
 
 #selection:
   # This string contains all characters that are used as separators for
