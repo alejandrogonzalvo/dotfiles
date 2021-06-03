@@ -6,8 +6,10 @@ pcall(require, "luarocks.loader")
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
+
 -- Theme handling library
 local beautiful = require("beautiful")
+
 -- Notification library and config
 local naughty = require("naughty")
 naughty.config.padding = 8
@@ -17,11 +19,17 @@ naughty.config.defaults.timeout = 2
 naughty.config.defaults.icon_size = 16
 beautiful.notification_font = "Iosevka Nerd Font:Medium:size=22;5"
 
+-- Enable hotkeys help widget for VIM and other apps
 local hotkeys_popup = require("awful.hotkeys_popup")
+
 -- bool variables for high-level management
 local v_muted= false
 local p_hidden = false
--- Enable hotkeys help widget for VIM and other apps
+local eww = false
+
+-- eww variables
+centerlaunch = "eww open-many blur_full weather profile quote search_full incognito-icon vpn-icon home_dir screenshot power_full reboot_full lock_full logout_full suspend_full"
+ewwclose = "eww close-all"
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
@@ -64,8 +72,8 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.tile,
-    awful.layout.suit.floating
+    awful.layout.suit.floating,
+    awful.layout.suit.tile
 }
 
 -- }}}
@@ -203,6 +211,18 @@ globalkeys = gears.table.join(
     	end,
 	{description = "hide polybar", group = "client"}),
 
+    awful.key({ modkey,           }, "/",
+      function ()
+        if eww then
+          awful.spawn(ewwclose)
+          eww = false
+        else
+          awful.spawn(centerlaunch)
+          eww = true
+        end
+      end,
+    {description = "toggle eww", group= "launcher"}),
+
 	awful.key({ modkey,		  }, "a",
 	function ()
 	  awful.layout.inc(1)
@@ -321,7 +341,7 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen
+                     placement = awful.placement.centered,
      }
     },
 
@@ -355,10 +375,14 @@ awful.rules.rules = {
         }
       }, properties = { floating = true }},
 
-    -- Add titlebars to normal clients and dialogs
+    -- Remove titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = false }
     },
+  
+    -- Solves Firefox buggy behaviour
+    { rule = { class = "Firefox" },
+      properties = { opacity = 1, maximized = false, floating = false } },
 
 }
 -- }}}
@@ -369,6 +393,11 @@ client.connect_signal("manage", function (c)
     -- Set the windows at the slave,
     -- i.e. put it at the end of others instead of setting it master.
     -- if not awesome.startup then awful.client.setslave(c) end
+    client.connect_signal("manage", function (c)
+      c.shape = function(cr,w,h)
+        gears.shape.rounded_rect(cr,w,h,12)
+      end
+    end)
 
     if awesome.startup
       and not c.size_hints.user_position
@@ -402,3 +431,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("/home/alejandro/.config/polybar/launch.sh --shapes")
+awful.spawn(terminal.." -e dijo", {
+  floating  = true,
+  tag = mouse.screen.selected_tag,
+  x = 900,
+})
