@@ -433,5 +433,5 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")
-awful.spawn.with_shell("/home/alejandro/.config/polybar/launch.sh --shapes")
+awful.spawn.with_shell("/home/alejandro/.config/polybar/forest/launch.sh")
 awful.spawn(terminal.." -e dijo")
