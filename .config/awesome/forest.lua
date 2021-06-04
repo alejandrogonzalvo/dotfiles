@@ -8,7 +8,7 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "iosevka 12"
+theme.font          = "iosevka 10"
 
 
 theme.useless_gap   = dpi(5)

@@ -12,11 +12,11 @@ local beautiful = require("beautiful")
 
 -- Notification library and config
 local naughty = require("naughty")
-naughty.config.padding = 8
-naughty.config.spacing = 8
-naughty.config.defaults.margin = 8
-naughty.config.defaults.timeout = 2
-naughty.config.defaults.icon_size = 16
+naughty.config.padding = 16
+naughty.config.spacing = 16
+naughty.config.defaults.margin = 16 
+naughty.config.defaults.timeout = 3
+naughty.config.defaults.icon_size = 48
 
 -- Enable hotkeys help widget for VIM and other apps
 local hotkeys_popup = require("awful.hotkeys_popup")
@@ -215,10 +215,27 @@ globalkeys = gears.table.join(
 	    if p_hidden then
 	        awful.spawn("polybar-msg cmd show")
 	        p_hidden = false
+          awful.screen.connect_for_each_screen(function(s)
+              s.padding = {
+                  left = 0,
+                  right = 0,
+                  top = 20,
+                  bottom = 0
+              }
+          end)
 	    else
 	    	awful.spawn("polybar-msg cmd hide")
-		p_hidden = true
-	    end
+		    p_hidden = true
+	      awful.screen.connect_for_each_screen(function(s)
+          s.padding = {
+            left = 0,
+            right = 0,
+            top = 0,
+            bottom = 0
+          }
+        end)
+end
+
     	end,
 	{description = "hide polybar", group = "client"}),
 
