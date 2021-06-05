@@ -21,7 +21,7 @@ Here you can change the opacity level and the main color of the browser. Also th
 
 :root {
     --urlbar-width:25vw;
-    --srf-color-primary: #87fa98;
+    --srf-color-primary: #50bd63
     --srf-color-selection: #66a6d9;
 }
 
@@ -329,6 +329,11 @@ and erease the second block.
 #urlbar .urlbarView {
     display: none !important;
 }
+
+/* Delete close and minimize buttons*/
+#titlebar {display: none !important;}
+#main-window {-moz-appearance:none !important;}
+
 
 /* 
 Designed and Coded by Miguel R. Ávila: https://github.com/MiguelRAvila
