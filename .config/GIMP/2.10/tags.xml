@@ -2227,6 +2227,168 @@
   <resource identifier="Iosevka Expanded" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Fixed" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Bold Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Bold Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Bold Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Heavy Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Heavy Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Heavy Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Heavy Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Light Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Light Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Light Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Light Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Medium Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Medium Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Medium Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Medium Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Semi-Bold Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Semi-Bold Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Semi-Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Semi-Bold Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Thin Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Thin Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Thin Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Thin Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Bold Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Bold Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Bold Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Light Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Light Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Light Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Fixed Ultra-Light Oblique Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Heavy" checksum="(null)">
   </resource>
 
@@ -2383,10 +2545,19 @@
   <resource identifier="Iosevka Term" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Bold" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Bold Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Bold Italic" checksum="(null)">
@@ -2395,10 +2566,25 @@
   <resource identifier="Iosevka Term Bold Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Bold Italic Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Bold Oblique" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Bold Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Heavy" checksum="(null)">
@@ -2407,10 +2593,22 @@
   <resource identifier="Iosevka Term Heavy" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Heavy Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Heavy Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Heavy Italic Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Heavy Oblique" checksum="(null)">
@@ -2419,10 +2617,22 @@
   <resource identifier="Iosevka Term Heavy Oblique" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term Heavy Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Heavy Oblique Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Italic Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Light" checksum="(null)">
@@ -2431,10 +2641,22 @@
   <resource identifier="Iosevka Term Light" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Light Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Light Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Light Italic Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Light Oblique" checksum="(null)">
@@ -2443,10 +2665,22 @@
   <resource identifier="Iosevka Term Light Oblique" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term Light Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Light Oblique Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Medium" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Medium Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Medium Italic" checksum="(null)">
@@ -2455,10 +2689,22 @@
   <resource identifier="Iosevka Term Medium Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Medium Italic Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Medium Oblique" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Medium Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Medium Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Medium Oblique Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Oblique" checksum="(null)">
@@ -2467,10 +2713,40 @@
   <resource identifier="Iosevka Term Oblique" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Semi-Bold Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Semi-Bold Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Semi-Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Semi-Bold Oblique Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Thin" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Thin Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Thin Italic" checksum="(null)">
@@ -2479,10 +2755,40 @@
   <resource identifier="Iosevka Term Thin Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term Thin Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Thin Italic Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Thin Oblique" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Thin Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Thin Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Thin Oblique Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Ultra-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Ultra-Bold Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Ultra-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Ultra-Bold Italic Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Ultra-Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Ultra-Bold Oblique Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Ultra-Light" checksum="(null)">
@@ -2491,16 +2797,34 @@
   <resource identifier="Iosevka Term Ultra-Light" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Ultra-Light Expanded" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Ultra-Light Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Ultra-Light Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Ultra-Light Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Iosevka Term Ultra-Light Italic Expanded" checksum="(null)">
+  </resource>
+
   <resource identifier="Iosevka Term Ultra-Light Oblique" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Term Ultra-Light Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Ultra-Light Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="Iosevka Term Ultra-Light Oblique Expanded" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka Thin" checksum="(null)">
@@ -2681,6 +3005,42 @@
   </resource>
 
   <resource identifier="Lekton Nerd Font Mono Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Mono Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Mono Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Sans" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Sans Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Sans Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Sans Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Serif" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Serif Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Serif Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Serif Italic" checksum="(null)">
   </resource>
 
   <resource identifier="LiterationMono Nerd Font" checksum="(null)">

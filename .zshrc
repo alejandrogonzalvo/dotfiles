@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 alias v="nvim"
 alias s="sudo"
 alias g="git"
+alias h="habito"
 
 
 #Enable regex

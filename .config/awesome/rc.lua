@@ -26,9 +26,9 @@ local v_muted= false
 local p_hidden = false
 local eww = false
 
--- eww variables
-centerlaunch = "eww open-many blur_full weather profile quote search_full incognito-icon vpn-icon home_dir screenshot power_full reboot_full lock_full logout_full suspend_full"
-ewwclose = "eww close-all"
+-- exterior margin
+  v_margin = 0
+  h_margin = 0
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
@@ -114,22 +114,80 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
+    -- Change client
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
+
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
     {description = "view next", group = "tag"}),
+
+    -- Modify margins
+    awful.key({ modkey, "Shift"   }, "[", function () 
+        h_margin = h_margin - 5
+        awful.screen.connect_for_each_screen(function(s)
+            s.padding = {
+                left = h_margin,
+                right = h_margin,
+                top = v_margin,
+                bottom = v_margin
+          }
+        end)
+    end,
+    {description = "decrease h_margin", group = "tag"}),
+
+    awful.key({ modkey, "Shift"   }, "]", function () 
+        v_margin = v_margin - 5
+        awful.screen.connect_for_each_screen(function(s)
+            s.padding = {
+                left = h_margin,
+                right = h_margin,
+                top = v_margin,
+                bottom = v_margin
+          }
+        end)
+    end,
+    {description = "decrease v_margin", group = "tag"}),
+
+    awful.key({ modkey,           }, "[", function () 
+        h_margin = h_margin + 5
+        awful.screen.connect_for_each_screen(function(s)
+            s.padding = {
+                left = h_margin,
+                right = h_margin,
+                top = v_margin,
+                bottom = v_margin
+          }
+        end)
+    end,
+    {description = "increment h_margin", group = "tag"}),
+
+    awful.key({ modkey,           }, "]", function () 
+        v_margin = v_margin + 5
+        awful.screen.connect_for_each_screen(function(s)
+            s.padding = {
+                left = h_margin,
+                right = h_margin,
+                top = v_margin,
+                bottom = v_margin
+          }
+        end)
+    end,
+    {description = "increment v_margin", group = "tag"}),
+
     awful.key({ modkey, "Control" }, "]", function () 
       local t = awful.screen.focused().selected_tag
       t.gap = t.gap + 5
       awful.layout.arrange(awful.screen.focused())
     end,
     {description = "increment useless gaps", group = "tag"}),
+
     awful.key({ modkey, "Control" }, "[", function ()
       local t = awful.screen.focused().selected_tag
       t.gap = t.gap - 5
       awful.layout.arrange(awful.screen.focused())
     end,
-    {description = "decrement useless gaps", group = "tag"}),     
+    {description = "decrease useless gaps", group = "tag"}),     
+
     awful.key({ modkey,           }, "o", function () awful.spawn("amixer set 'Master' 10%-")   end,
               {description = "lower volume", group= "launcher"}),
     awful.key({ modkey,           }, "p", function () awful.spawn("amixer set 'Master' 10%+")   end,
@@ -217,10 +275,10 @@ globalkeys = gears.table.join(
 	        p_hidden = false
           awful.screen.connect_for_each_screen(function(s)
               s.padding = {
-                  left = 0,
-                  right = 0,
-                  top = 20,
-                  bottom = 0
+                  left = h_margin,
+                  right = h_margin,
+                  top = v_margin + 20,
+                  bottom = v_margin 
               }
           end)
 	    else
@@ -228,10 +286,10 @@ globalkeys = gears.table.join(
 		    p_hidden = true
 	      awful.screen.connect_for_each_screen(function(s)
           s.padding = {
-            left = 0,
-            right = 0,
-            top = 0,
-            bottom = 0
+            left = h_margin,
+            right = h_margin,
+            top = v_margin,
+            bottom = v_margin
           }
         end)
 end
@@ -260,6 +318,8 @@ end
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+              {description = "open a terminal", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn("kitty") end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -434,4 +494,3 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Autostart
 awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("/home/alejandro/.config/polybar/forest/launch.sh")
-awful.spawn(terminal.." -e dijo")
