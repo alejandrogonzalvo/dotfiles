@@ -103,6 +103,7 @@ alias v="nvim"
 alias s="sudo"
 alias g="git"
 alias h="habito"
+alias ue4="./Downloads/UnrealEngine/Engine/Binaries/Linux/UE4Editor"
 
 
 #Enable regex

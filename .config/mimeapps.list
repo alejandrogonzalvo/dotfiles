@@ -10,6 +10,7 @@ application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 application/pdf=org.pwmt.zathura.desktop
+application/uproject=com.epicgames.UnrealEngineEditor.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;

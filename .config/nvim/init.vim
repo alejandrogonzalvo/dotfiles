@@ -41,6 +41,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
 
 
