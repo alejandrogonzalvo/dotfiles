@@ -14,7 +14,7 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 naughty.config.padding = 16
 naughty.config.spacing = 16
-naughty.config.defaults.margin = 16 
+naughty.config.defaults.margin = 16
 naughty.config.defaults.timeout = 3
 naughty.config.defaults.icon_size = 48
 
@@ -95,7 +95,7 @@ screen.connect_signal("property::geometry", set_wallpaper)
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
     set_wallpaper(s)
-    end) 
+    end)
 
 awful.screen.connect_for_each_screen(function(s)
     -- Each screen has its own tag table.
@@ -121,7 +121,7 @@ globalkeys = gears.table.join(
     {description = "view next", group = "tag"}),
 
     -- Modify margins
-    awful.key({ modkey, "Shift"   }, "[", function () 
+    awful.key({ modkey, "Shift"   }, "[", function ()
         h_margin = h_margin - 5
         awful.screen.connect_for_each_screen(function(s)
             s.padding = {
@@ -134,7 +134,7 @@ globalkeys = gears.table.join(
     end,
     {description = "decrease h_margin", group = "tag"}),
 
-    awful.key({ modkey, "Shift"   }, "]", function () 
+    awful.key({ modkey, "Shift"   }, "]", function ()
         v_margin = v_margin - 5
         awful.screen.connect_for_each_screen(function(s)
             s.padding = {
@@ -271,8 +271,9 @@ globalkeys = gears.table.join(
     	function()
 	        awful.spawn("spectacle")
     	end,
-	{description = "hide polybar", group = "client"}),
+      {description = "hide polybar", group = "client"}),
 
+    -- Show and hide polybar
     awful.key({ modkey,		  }, "s",
     	function()
 	    if p_hidden then
@@ -300,8 +301,24 @@ globalkeys = gears.table.join(
 end
 
     	end,
-	{description = "hide polybar", group = "client"}),
+      {description = "hide polybar", group = "client"}),
 
+    -- Spotify manipulation
+    awful.key({ modkey,           }, "8",
+      function ()
+        awful.spawn("spotifyctl -q previous")
+      end,
+      {description = "previous song", group = "client"}),
+    awful.key({ modkey,           }, "9",
+      function ()
+        awful.spawn("spotifyctl -q playpause")
+      end,
+      {description = "previous song", group = "client"}),
+    awful.key({ modkey,           }, "0",
+      function ()
+        awful.spawn("spotifyctl -q next")
+      end,
+      {description = "previous song", group = "client"}),
     awful.key({ modkey,           }, "/",
       function ()
         if eww then
