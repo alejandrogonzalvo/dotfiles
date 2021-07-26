@@ -24,11 +24,11 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- bool variables for high-level management
 local v_muted= false
 local p_hidden = false
-local eww = false
 
 -- exterior margin
-  v_margin = 0
-  h_margin = 0
+v_margin = 0
+h_margin = 0
+
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
@@ -185,11 +185,12 @@ globalkeys = gears.table.join(
       t.gap = t.gap - 5
       awful.layout.arrange(awful.screen.focused())
     end,
-    {description = "decrease useless gaps", group = "tag"}),     
+    {description = "decrease useless gaps", group = "tag"}),
 
-    awful.key({ modkey,           }, "o", function () awful.spawn("amixer set 'Master' 10%-")   end,
+    -- Volume configuration
+    awful.key({ modkey,           }, "o", function () awful.spawn("amixer set 'Master' 5%-")   end,
               {description = "lower volume", group= "launcher"}),
-    awful.key({ modkey,           }, "p", function () awful.spawn("amixer set 'Master' 10%+")   end,
+    awful.key({ modkey,           }, "p", function () awful.spawn("amixer set 'Master' 5%+")   end,
               {description = "lower volume", group= "launcher"}),
     awful.key({ modkey,           }, "m",
       function ()
@@ -203,6 +204,7 @@ globalkeys = gears.table.join(
       end,
     {description = "mute volume", group= "launcher"}),
 
+    -- Client moving
     awful.key({ modkey, "Shift" }, "Left",
       function ()
         -- get current tag
@@ -238,20 +240,24 @@ globalkeys = gears.table.join(
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
+
     awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "client"}),
+
     awful.key({ modkey,  }, "j",
  	  function ()
       local c = awful.client.next(1)
       client.focus = c
   	end,
-      {description = "focus the before client", group = "screen"}),
+    {description = "focus the before client", group = "screen"}),
+
     awful.key({ modkey,  }, "k",
    	function ()
 	    local c = awful.client.next(-1)
 	    client.focus = c
    	end,
-        {description = "focus the next client", group = "screen"}),
+    {description = "focus the next client", group = "screen"}),
+
     awful.key({ modkey,           }, "Tab",
         function ()
             awful.client.focus.history.previous()
