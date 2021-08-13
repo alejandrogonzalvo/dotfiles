@@ -37,11 +37,13 @@ cmap w!! w !sudo tee %
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'OmniSharp/omnisharp-vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'sbdchd/neoformat'
+
 call plug#end()
 
 
@@ -50,7 +52,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_section_y = ''
 let g:airline_section_z = '  %l/%L'
-let g:airline_theme = 'fruit_punch'
+let g:airline_theme = 'bubblegum'
 
 " ========================================
 " Custom styling
@@ -71,3 +73,13 @@ let g:mapleader = ","
 
 " open NERDTree
 nnoremap <silent> <leader>tr :NERDTreeToggle<CR>
+
+" neoformat shortcut
+nnoremap <silent> <leader>nf :Neoformat<CR>
+
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<Bslash>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
