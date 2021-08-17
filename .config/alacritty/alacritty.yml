@@ -172,16 +172,6 @@ colors:
     cyan:    '#00dddd'
     white:   '#f7f7f7'
 
-  # Dim colors
-  dim:
-    black:   '#232323'
-    red:     '#74423f'
-    green:   '#5e6547'
-    yellow:  '#8b7653'
-    blue:    '#556b79'
-    magenta: '#6e4962'
-    cyan:    '#5c8482'
-    white:   '#828282'
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
