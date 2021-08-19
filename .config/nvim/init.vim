@@ -31,8 +31,10 @@ au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm al
 " You can't stop me
 cmap w!! w !sudo tee %
 
+
+" ========================================
 " Plugins
-"==================================================================
+" ========================================
 
 call plug#begin('~/.vim/plugged')
 
@@ -68,6 +70,15 @@ autocmd WinLeave * setlocal nocursorline
 " Keyboard mapping
 " ========================================
 
+" auto closing
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " set leader key
 let g:mapleader = ","
 
@@ -77,9 +88,8 @@ nnoremap <silent> <leader>tr :NERDTreeToggle<CR>
 " neoformat shortcut
 nnoremap <silent> <leader>nf :Neoformat<CR>
 
-" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
-" - https://github.com/Valloric/YouCompleteMe
-" - https://github.com/nvim-lua/completion-nvim
+" Trigger configuration.
 let g:UltiSnipsExpandTrigger="<Bslash>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Buffer workflow shortcuts
+nnoremap <leader>ls :ls<CR>
