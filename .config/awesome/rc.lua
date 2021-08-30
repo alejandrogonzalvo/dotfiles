@@ -475,6 +475,9 @@ awful.rules.rules = {
     { rule = { class = "firefox" },
       properties = { opacity = 1, maximized = false, floating = false } },
 
+    { rule = { class = "mpv" },
+      properties = {border_width = 0 }},
+
 }
 -- }}}
 

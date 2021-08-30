@@ -1,15 +1,22 @@
 # GIMP action-history
 
-(history-item "layers-merge-down" 1)
-(history-item "file-open" 0)
+(history-item "file-quit" 1)
+(history-item "layers-merge-down" 0)
 (history-item "image-new" 0)
-(history-item "file-open-as-layers" 0)
+(history-item "file-open" 0)
+(history-item "tools-move" 0)
+(history-item "edit-cut" 0)
 (history-item "select-all" 0)
 (history-item "select-none" 0)
+(history-item "file-export-as" 1)
+(history-item "file-open-as-layers" 0)
 (history-item "dialogs-preferences" 0)
 (history-item "image-resize" 0)
 (history-item "file-save" 0)
-(history-item "file-export-as" 0)
-(history-item "file-quit" 1)
+(history-item "edit-paste" 0)
+(history-item "tools-align" 0)
+(history-item "edit-paste-in-place" 0)
+(history-item "layers-anchor" 0)
+(history-item "file-save-as" 1)
 
 # end of action-history

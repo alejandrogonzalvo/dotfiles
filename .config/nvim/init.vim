@@ -38,14 +38,9 @@ cmap w!! w !sudo tee %
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'sbdchd/neoformat'
-
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 
@@ -55,6 +50,9 @@ let g:airline_powerline_fonts = 1
 let g:airline_section_y = ''
 let g:airline_section_z = '  %l/%L'
 let g:airline_theme = 'bubblegum'
+
+" Avoid virtualenv conflicts
+let g:python_host_prog='/usr/bin/python'
 
 " ========================================
 " Custom styling
@@ -82,14 +80,16 @@ inoremap {;<CR> {<CR>};<ESC>O
 " set leader key
 let g:mapleader = ","
 
-" open NERDTree
-nnoremap <silent> <leader>tr :NERDTreeToggle<CR>
-
-" neoformat shortcut
-nnoremap <silent> <leader>nf :Neoformat<CR>
-
-" Trigger configuration.
-let g:UltiSnipsExpandTrigger="<Bslash>"
+" Open coc-explorer 
+:nnoremap <silent> <leader>e :CocCommand explorer<CR>
 
 " Buffer workflow shortcuts
 nnoremap <leader>ls :ls<CR>
+
+" coc mapping
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
+                                           \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
