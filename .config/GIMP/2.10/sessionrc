@@ -59,7 +59,7 @@
                 (aux-info
                     (show-button-bar "true"))))
         (book
-            (position 347)
+            (position 360)
             (current-page 0)
             (dockable "gimp-layer-list"
                 (tab-style automatic)
@@ -95,6 +95,9 @@
     (factory-entry "gimp-file-export-dialog")
     (position 0 0)
     (size 1308 929))
+(session-info "toplevel"
+    (factory-entry "gimp-toolbox-color-dialog")
+    (position 706 325))
 
 (hide-docks no)
 (single-window-mode yes)

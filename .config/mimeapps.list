@@ -11,6 +11,8 @@ application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 application/pdf=org.pwmt.zathura.desktop
 application/uproject=com.epicgames.UnrealEngineEditor.desktop
+x-scheme-handler/msteams=teams.desktop
+application/lrf=calibre-lrfviewer.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;
@@ -24,3 +26,4 @@ application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 text/plain=nvim.desktop;
+image/png=gimp.desktop;
