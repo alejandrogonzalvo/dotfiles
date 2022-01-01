@@ -25,6 +25,10 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 local v_muted= false
 local p_hidden = false
 
+-- keyboard layout variable
+local k_layout = "us"
+local k_changed = "false"
+
 -- exterior margin
 v_margin = 0
 h_margin = 0
@@ -337,6 +341,28 @@ end
       end,
 	{description = "switch layout", group = "layout"}),
 
+
+    -- Keyboard layout manipulation
+    awful.key({modkey,            }, "1",
+      function ()
+        if k_layout == "us" and not k_changed then 
+                awful.spawn("setxkbmap es")
+                k_layout = "es"
+                k_changed = true
+        end
+        if k_layout == "es" and not k_changed then
+                awful.spawn("setxkbmap gr")
+                k_layout = "gr"
+                k_changed = true
+        end
+        if k_layout == "gr" and not k_changed then
+                awful.spawn("setxkbmap us")
+                k_layout = "us"
+                k_changed = true
+        end
+        k_changed = false
+      end,
+      {description = "change keyboard layout", group = "layout"}),
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
